@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<stdbool.h>
+
+bool valida_num(int num){
+    if(num == -1){
+        printf("Numero invalido");
+        return false;
+    }
+}
+
+int calcula(int x,char op, int y){
+    if(op == '+'){
+        return soma(x, y);
+    } else if(op == '-'){
+        return subtracao(x, y);
+    } else if (op == '*'){
+        return multiplicacao(x, y);
+    } else if (op == '/'){
+        return divisao(x, y);
+    } else {
+        printf("Operacao invalida");
+        exit(-1);
+    }
+}
+
+int soma(int x, int y){
+    return x+y;
+}
+
+int subtracao(int x, int y){
+    return x-y;
+}
+
+int multiplicacao(int x, int y){
+    return x*y;
+}
+
+int divisao(int x, int y){
+    
+    return x/y;
+    
+}
+
+bool valida_divisao(int x, int y){
+    if(x < y){
+        return false;
+    } else if(x == 0){
+        return false;
+    } else{
+        return true;
+    }
+}
+
+int main(){
+    int num1, num2=0;
+    char op;
+    int resultado=0;
+    
+        printf("Digite operacao (x op y): ");
+        scanf("%d %c %d", &num1, &op, &num2);
+       resultado+= calcula(num1, op, num2);
+       printf("%d", resultado);
+}
