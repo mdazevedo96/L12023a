@@ -37,9 +37,9 @@ int multiplicacao(int x, int y){
 }
 
 int divisao(int x, int y){
-    
+
     return x/y;
-    
+
 }
 
 bool valida_divisao(int x, int y){
@@ -53,12 +53,19 @@ bool valida_divisao(int x, int y){
 }
 
 int main(){
+    bool continua = true;
     int num1, num2=0;
     char op;
     int resultado=0;
-    
-        printf("Digite operacao (x op y): ");
-        scanf("%d %c %d", &num1, &op, &num2);
-       resultado+= calcula(num1, op, num2);
-       printf("%d", resultado);
-}
+    while (continua){
+        if(op !='\n'){
+            printf("Digite operacao (x op y): (Digite ENTER para sair)");
+            scanf("%d %c %d", &num1, &op, &num2);
+                resultado+= calcula(num1, op, num2);
+                continua = false;
+            }
+            printf("%d", resultado);
+
+        }
+
+    }
