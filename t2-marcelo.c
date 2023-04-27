@@ -54,7 +54,7 @@ int main(){
     int resultado=0;
     while (continua){
 /// na primeira vez, a variável 'op' não está inicializada, pode ter qualquer valor
-        if(op !='\n'){
+        if(op !='='){
             printf("Digite operacao (x op y): (Digite ENTER para sair)");
 /// não é bem isso que é pedido, é para operar sobre o resultado anterior.
 /// se for digitado "10+2*3" deve dar 36.
