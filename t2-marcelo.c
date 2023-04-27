@@ -2,14 +2,6 @@
 #include<stdlib.h>
 #include<stdbool.h>
 
-bool valida_num(int num){
-    if(num == -1){
-        printf("Numero invalido");
-        return false;
-    }
-/// a função não é void, deve ter return
-}
-
 int calcula(int x,char op, int y){
     if(op == '+'){
 /// a função deve ser conhecida pelo compilador antes da chamada.
@@ -55,11 +47,10 @@ int divisao(int x, int y){
 
 }
 
-
 int main(){
     bool continua = true;
     int num1, num2=0;
-    char op;
+    char op = NULL;
     int resultado=0;
     while (continua){
 /// na primeira vez, a variável 'op' não está inicializada, pode ter qualquer valor
